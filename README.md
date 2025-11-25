@@ -131,6 +131,7 @@ Endpoint: http://127.0.0.1:5000/users/1
 
 ![Cuándo id no existente](postman_get3.png)
 
+
 ## Pruebas con POST
 
 POST /users — Crear un nuevo usuario
@@ -141,7 +142,11 @@ Endpoint: http://127.0.0.1:5000/users
 
 ![Crear un nuevo usuario](postman_post1.png)
 
+Error en POST(gmail duplicado)
+
 ![Error en POST(gmail duplicado)](postman_post2.png)
+
+Error en POST(faltan datos)
 
 ![Error en POST(faltan datos)](postman_post3.png)
 
@@ -154,7 +159,11 @@ Método: PUT
 
 Endpoint: http://127.0.0.1:5000/users/8
 
+Foto(sin actualizar página del navegador)
+
 ![foto(sin actualizar página del navegador)](postman_put1.png)
+
+Foto(actualizando la página del navegador)
 
 ![foto(actualizando la página del navegador)](postman_put2.png)
 
@@ -176,7 +185,11 @@ Método: DELETE
 
 Endpoint: http://127.0.0.1:5000/users/9
 
+Foto(sin actualizar página del navegador)
+
 ![Foto(sin actualizar página del navegador)](postman_delete1.png)
+
+Foto (actualizando la página del navegador)
 
 ![Foto(actualizando página del navegador)](postman_delete2.png)
 
@@ -188,6 +201,7 @@ Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
 
 ![DELETE](postman_delete3.png)
+
 
 
 
