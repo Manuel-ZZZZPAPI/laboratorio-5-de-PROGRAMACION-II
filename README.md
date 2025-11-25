@@ -102,7 +102,7 @@ La base de datos SQLite se genera automáticamente al ejecutar el proyecto por p
 ---
 
 ## Pruebas con Postman
-
+(Algunas imagenes en el README.md se ven borrosas , pero en el informe se ven nitidas)
 ## Pruebas GET en Postman
 
 ### GET /users — Obtener todos los usuarios
@@ -155,3 +155,4 @@ Error en DELETE(cuando id no existente)
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
 ![DELETE](postman_delete3.png)
+
