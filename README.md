@@ -108,29 +108,27 @@ La base de datos SQLite se genera automáticamente al ejecutar el proyecto por p
 ### GET /users — Obtener todos los usuarios
 Método: GET
 Endpoint: http://127.0.0.1:5000/users
-<img width="567" height="298" alt="image" src="https://github.com/user-attachments/assets/847dcee4-e11c-4b34-bf9d-23e9a00626b9" />
-
+![Obtener todos los usuarios](postman_get1.png)
 
 GET /users/<id> — Obtener usuario por ID
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/8
-<img width="567" height="305" alt="image" src="https://github.com/user-attachments/assets/96b16f46-b5d6-4a4f-b3a3-641a36456458" />
+![Obtener usuario por ID](postman_get2.png)
 
 Error en GET (cuándo id no existente)
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/1
-<img width="567" height="295" alt="image" src="https://github.com/user-attachments/assets/cf7b4bd3-dc66-42f8-a819-e47508a4994e" />
-
+![Cuándo id no existente](postman_get3.png)
 
 ## Pruebas con POST
 POST /users — Crear un nuevo usuario
 Método: POST
 Endpoint: http://127.0.0.1:5000/users
-![Crear un nuevo usuario](img/postman_post1.png)
+![Crear un nuevo usuario](postman_post1.png)
 
-![Error en POST(gmail duplicado)](img/postman_post2.png)
+![Error en POST(gmail duplicado)](postman_post2.png)
 
-![Error en POST(faltan datos)](img/postman_post3.png)
+![Error en POST(faltan datos)](postman_post3.png)
 
 ## Pruebas con PUT
 PUT /users/<id> — Actualizar un usuario existente
@@ -138,23 +136,22 @@ Método: PUT
 Endpoint: http://127.0.0.1:5000/users/8
 ![foto(sin actualizar página del navegador)](postman_put1.png)
 
-![foto(actualizando la página del navegador)](img/postman_put2.png)
+![foto(actualizando la página del navegador)](postman_put2.png)
 
 Error en PUT (Cuando id no existente)
 Método: PUT
 Endpoint: http://127.0.0.1:5000/users/1
-![(Cuando id no existente)](img/postman_put3.png)
+![(Cuando id no existente)](postman_put3.png)
 
 
 ## Pruebas con  DELETE
 DELETE /users/<id> — Eliminar un usuario
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/9
-![Foto(sin actualizar página del navegador)](img/postman_delete1.png)
-![Foto(actualizando página del navegador)](img/postman_delete2.png)
+![Foto(sin actualizar página del navegador)](postman_delete1.png)
+![Foto(actualizando página del navegador)](postman_delete2.png)
 
 Error en DELETE(cuando id no existente)
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
-![DELETE](img/postman_delete3.png)
-
+![DELETE](postman_delete3.png)
