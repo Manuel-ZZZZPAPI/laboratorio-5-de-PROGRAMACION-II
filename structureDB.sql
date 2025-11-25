@@ -1,10 +1,7 @@
--- structureDB.sql
-PRAGMA foreign_keys = ON;
-
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
-    apellido TEXT,
-    email TEXT UNIQUE,
-    creado_en TEXT DEFAULT (datetime('now','localtime'))
+    apellido TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    edad INTEGER,
 );
