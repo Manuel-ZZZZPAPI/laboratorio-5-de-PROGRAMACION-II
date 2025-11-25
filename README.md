@@ -1,1 +1,1 @@
-# laboeatorio-5-de-PROGRAMACI-N-II
+# laboratorio-5-de-PROGRAMACIÓN-II
