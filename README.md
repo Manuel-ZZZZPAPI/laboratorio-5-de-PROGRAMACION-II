@@ -108,7 +108,10 @@ La base de datos SQLite se genera automáticamente al ejecutar el proyecto por p
 ### GET /users — Obtener todos los usuarios
 Método: GET
 Endpoint: http://127.0.0.1:5000/users
+
 ![Obtener todos los usuarios](postman_get1.png)
+
+
 
 GET /users/<id> — Obtener usuario por ID
 Método: GET
@@ -155,4 +158,5 @@ Error en DELETE(cuando id no existente)
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
 ![DELETE](postman_delete3.png)
+
 
