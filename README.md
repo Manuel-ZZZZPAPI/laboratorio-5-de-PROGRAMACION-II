@@ -108,17 +108,19 @@ La base de datos SQLite se genera automáticamente al ejecutar el proyecto por p
 ### GET /users — Obtener todos los usuarios
 Método: GET
 Endpoint: http://127.0.0.1:5000/users
-![Obtener todos los usuarios](img/postman_get1.png)
+<img width="567" height="298" alt="image" src="https://github.com/user-attachments/assets/847dcee4-e11c-4b34-bf9d-23e9a00626b9" />
+
 
 GET /users/<id> — Obtener usuario por ID
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/8
-![Obtener usuario por ID](img/postman_get2.png)
+<img width="567" height="305" alt="image" src="https://github.com/user-attachments/assets/96b16f46-b5d6-4a4f-b3a3-641a36456458" />
 
 Error en GET (cuándo id no existente)
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/1
-![Cuándo id no existente](img/postman_get3.png)
+<img width="567" height="295" alt="image" src="https://github.com/user-attachments/assets/cf7b4bd3-dc66-42f8-a819-e47508a4994e" />
+
 
 ## Pruebas con POST
 POST /users — Crear un nuevo usuario
@@ -134,7 +136,7 @@ Endpoint: http://127.0.0.1:5000/users
 PUT /users/<id> — Actualizar un usuario existente
 Método: PUT
 Endpoint: http://127.0.0.1:5000/users/8
-![foto(sin actualizar página del navegador)](img/postman_put1.png)
+![foto(sin actualizar página del navegador)](postman_put1.png)
 
 ![foto(actualizando la página del navegador)](img/postman_put2.png)
 
@@ -155,3 +157,4 @@ Error en DELETE(cuando id no existente)
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
 ![DELETE](img/postman_delete3.png)
+
