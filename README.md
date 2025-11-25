@@ -23,14 +23,13 @@ Carpeta api_flask
 -structureDB.sql    # Script SQL para crear la tabla 'users'
 ```
 
----
 
 ##Tecnologías Utilizadas
 - **Python 3.9+**
 - **Flask**
 - **SQLite3**
 - **Postman** para pruebas
----
+
 
 ## Instalación y Configuración
 ### 1. Clonar el repositorio
@@ -42,21 +41,34 @@ cd api_flask_sqlite
 ### 2. Crear un entorno virtual
 ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 ```
+### 3. Crea structureDB.sql con el esquema 
+-- structureDB.sql
+PRAGMA foreign_keys = ON;
 
-### 3. Instalar dependencias
-```bash
-pip install -r requirements.txt
-```
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    apellido TEXT,
+    email TEXT UNIQUE,
+    creado_en TEXT DEFAULT (datetime('now','localtime'))
+);
 
-### 4. Ejecutar la API
+### 4. Crea db.py. 
+''' Implementa funciones get(id=None), post(data), put(id, data), delete(id) y gestión de errores.
+
+### 5. Crea app.py con las rutas y respuestas JSON
+´´Usamos int para <int:user_id> (valida automáticamente).
+´´POST /users no recibe id en la ruta (se autogenera).
+´´Manejo explícito de errores con códigos HTTP.
+
+### 6. Ejecutar la API
 ```bash
 python app.py
 ```
 
-### 5. URL base
+### 7. URL base
 ```
 http://127.0.0.1:5000
 ```
@@ -91,51 +103,55 @@ La base de datos SQLite se genera automáticamente al ejecutar el proyecto por p
 
 ## Pruebas con Postman
 
-## Pruebas con GET
-GET /users — Obtener todos los usuarios
+## Pruebas GET en Postman
+
+### GET /users — Obtener todos los usuarios
 Método: GET
 Endpoint: http://127.0.0.1:5000/users
+![Obtener todos los usuarios](img/postman_get1.png)
 
 GET /users/<id> — Obtener usuario por ID
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/8
+![Obtener usuario por ID](img/postman_get2.png)
 
 Error en GET (cuándo id no existente)
 Método: GET
 Endpoint: http://127.0.0.1:5000/users/1
+![Cuándo id no existente](img/postman_get3.png)
 
 ## Pruebas con POST
 POST /users — Crear un nuevo usuario
 Método: POST
 Endpoint: http://127.0.0.1:5000/users
+![Crear un nuevo usuario](img/postman_post1.png)
 
-Error en POST(gmail duplicado)
+![Error en POST(gmail duplicado)](img/postman_post2.png)
 
-Error en POST(faltan datos)
+![Error en POST(faltan datos)](img/postman_post3.png)
 
 ## Pruebas con PUT
 PUT /users/<id> — Actualizar un usuario existente
 Método: PUT
 Endpoint: http://127.0.0.1:5000/users/8
-foto(sin actualizar página del navegador)
+![foto(sin actualizar página del navegador)](img/postman_put1.png)
 
-foto(actualizando la página del navegador)
+![foto(actualizando la página del navegador)](img/postman_put2.png)
 
 Error en PUT (Cuando id no existente)
 Método: PUT
 Endpoint: http://127.0.0.1:5000/users/1
+![(Cuando id no existente)](img/postman_put3.png)
 
 
 ## Pruebas con  DELETE
 DELETE /users/<id> — Eliminar un usuario
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/9
-Foto(sin actualizar página del navegador)
-
-
-Foto(actualizando la página del navegador)
+![Foto(sin actualizar página del navegador)](img/postman_delete1.png)
+![Foto(actualizando página del navegador)](img/postman_delete2.png)
 
 Error en DELETE(cuando id no existente)
 Método: DELETE
 Endpoint: http://127.0.0.1:5000/users/1
-
+![DELETE](img/postman_delete3.png)
